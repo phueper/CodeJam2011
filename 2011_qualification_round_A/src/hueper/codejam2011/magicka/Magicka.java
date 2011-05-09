@@ -64,7 +64,7 @@ public class Magicka {
 						// check last to chars for combination
 						int lastElemValue = baseLookup[result.charAt(resultLength - 1)];
 						int secondLastElemValue = baseLookup[result.charAt(resultLength - 2)];
-						if (combinationLookup[lastElemValue + secondLastElemValue] != 0) {
+						if (lastElemValue != 0 && secondLastElemValue != 0 && combinationLookup[lastElemValue + secondLastElemValue] != 0) {
 							// if combination found, replace them with combination result and done
 							result = result.substring(0, resultLength - 2);
 							result += combinationLookup[lastElemValue + secondLastElemValue];
